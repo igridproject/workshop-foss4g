@@ -1,0 +1,28 @@
+{
+  "job_id": "example.ex03.transform",
+  "active": "true",
+  "trigger": {
+    "type": "http",
+    "appkey": "ex03",
+    "method": "get"
+  },
+  "data_in": {
+    "type": "input",
+    "param": {
+      "object": "httpdata"
+    }
+  },
+  "data_transform": {
+    "type": "transform",
+    "param": {
+      "script": "data.msg = src.data.msg + String(Math.floor(Date.now() / 1000));data.ts=String(Math.floor(Date.now() / 1000))"
+    }
+  },
+  "data_out": {
+    "type": "dweet",
+    "param": {
+      "thing": "myname-example-msg"
+    }
+  },
+  "_vo": "example"
+}

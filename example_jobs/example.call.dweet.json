@@ -1,0 +1,17 @@
+{
+  "job_id": "example.call.dweet",
+  "active": "true",
+  "data_in": {
+    "type": "input"
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "dweet",
+    "param": {
+      "thing": "myname-example-02"
+    }
+  },
+  "_vo": "example"
+}

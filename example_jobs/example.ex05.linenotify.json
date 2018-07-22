@@ -1,0 +1,26 @@
+{
+  "job_id": "example.ex05.linenotify",
+  "active": "true",
+  "trigger": {
+    "type": "http",
+    "appkey": "line",
+    "method": "get"
+  },
+  "data_in": {
+    "type": "input",
+    "param": {
+      "object": "httpdata"
+    }
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "line-notify",
+    "param": {
+      "token": "LINE-TOKEN",
+      "message": "${data.msg}"
+    }
+  },
+  "_vo": "example"
+}

@@ -1,0 +1,31 @@
+{
+  "job_id": "example.sftpsync",
+  "active": "true",
+  "trigger": {
+    "type": "cron",
+    "cmd": "5 * * * *"
+  },
+  "data_in": {
+    "type": "sftp-filesync",
+    "param": {
+      "host": "127.0.0.1",
+      "username": "bigstream",
+      "password": "bigstream",
+      "dir": "/home/bigstream/test",
+      "last_modify_ts": "1515519771",
+      "filter": {
+        "ext": ".txt"
+      }
+    }
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "storage",
+    "param": {
+      "channel": "ipc",
+      "storage_name": "example.sftpsync"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "job_id": "example.ex02.push2dweet",
+  "active": "true",
+  "trigger": {
+    "type": "http",
+    "appkey": "ex02",
+    "method": "get"
+  },
+  "data_in": {
+    "type": "input",
+    "param": {
+      "object": "httpdata"
+    }
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "dweet",
+    "param": {
+      "thing": "myname-example-msg"
+    }
+  },
+  "_vo": "example"
+}

@@ -1,0 +1,27 @@
+{
+  "job_id": "example.nbudp.message",
+  "active": "true",
+  "trigger": {
+    "type": "nbudp",
+    "keyname": "testnb"
+  },
+  "data_in": {
+    "type": "input"
+  },
+  "data_transform": {
+    "type": "transform",
+    "param": {
+      "script": [
+        "data = {}",
+        "data.msg = src.data.message"
+      ]
+    }
+  },
+  "data_out": {
+    "type": "dweet",
+    "param": {
+      "thing": "myname-example-udp"
+    }
+  },
+  "_vo": "example"
+}

@@ -1,0 +1,31 @@
+{
+  "job_id": "example.rainradar.cei",
+  "active": "false",
+  "trigger": {
+    "type": "cron",
+    "cmd": "*/5 * * * *"
+  },
+  "data_in": {
+    "type": "http-request",
+    "param": {
+      "url": "http://203.155.220.231/Radar/pics/zfiltered.jpg",
+      "encoding": "binary"
+    }
+  },
+  "data_transform": [
+    {
+      "type": "filter-duplicate",
+      "param": {
+        "name": "nck"
+      }
+    }
+  ],
+  "data_out": {
+    "type": "storage",
+    "param": {
+      "channel": "ipc",
+      "storage_name": "example.rainradar.nck"
+    }
+  },
+  "_vo": "$"
+}

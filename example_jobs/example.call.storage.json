@@ -1,0 +1,17 @@
+{
+  "job_id": "example.call.storage",
+  "active": "true",
+  "data_in": {
+    "type": "input"
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "storage",
+    "param": {
+      "storage_name": "example.storage"
+    }
+  },
+  "_vo": "example"
+}

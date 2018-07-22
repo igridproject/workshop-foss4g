@@ -1,0 +1,25 @@
+{
+  "job_id": "example.ex01.httppush",
+  "active": "true",
+  "trigger": {
+    "type": "http",
+    "appkey": "ex01",
+    "method": "get"
+  },
+  "data_in": {
+    "type": "input",
+    "param": {
+      "object": "httpdata"
+    }
+  },
+  "data_transform": {
+    "type": "noop"
+  },
+  "data_out": {
+    "type": "storage",
+    "param": {
+      "storage_name": "example.ex01.httppush"
+    }
+  },
+  "_vo": "example"
+}
