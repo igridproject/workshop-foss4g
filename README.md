@@ -1,1 +1,1 @@
-# workshop-foss4g
+# BigStream Workshop @Foss4gTH18
